@@ -128,3 +128,26 @@
     @apply font-sans;
   }
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: black #f0efec;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0efec;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 9999px;
+  border: 2px solid #f0efec;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}

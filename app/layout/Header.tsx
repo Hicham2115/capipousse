@@ -10,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -30,9 +31,8 @@ const iconButtonClass = "transition-transform duration-200 hover:scale-110 hover
 function Brand() {
   return (
     <Link href="/" aria-label={`${product.brand} — accueil`} className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center leading-none transition-opacity hover:opacity-70">
-      <span className="mb-0.5 flex size-6 items-center justify-center rounded-[45%_55%_48%_52%] border-2 border-black text-xs font-serif leading-none">◒</span>
-      <span className="font-serif text-xl tracking-[-0.055em] sm:text-2xl">{product.brand}</span>
-      <span className="mt-0.5 text-[0.45rem] tracking-[-0.02em]">{product.brandSuffix}</span>
+      <Image src="/brand/capipousse-logo.png" alt={product.brand} width={1600} height={396} priority className="h-7 w-auto sm:h-8" />
+      <span className="mt-1 text-[0.45rem] tracking-[-0.02em]">{product.brandSuffix}</span>
     </Link>
   );
 }

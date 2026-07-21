@@ -11,12 +11,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import image from "@/app/assets/img1.png";
+import { product } from "@/lib/content/product";
 import { fadeUpContainer, fadeUpItem } from "@/lib/motion";
 
 const contactDetails = [
-  { icon: Mail, title: "Email", lines: ["contact@capipousse.com", "Nous répondons sous 24h"] },
+  { icon: Mail, title: "Email", lines: [product.manufacturer.email, "Nous répondons sous 24h"] },
   { icon: Phone, title: "Téléphone", lines: ["+212 6 00 00 00 00", "Lun – Ven : 9h00 – 18h00"] },
-  { icon: MapPin, title: "Adresse", lines: ["Coopérative Konouz Watany", "232 Loudaya, Marrakech, Maroc"] },
+  { icon: MapPin, title: "Adresse", lines: [product.manufacturer.name, "232 Loudaya, Marrakech, Maroc"] },
   { icon: Clock3, title: "Horaires", lines: ["Lundi – Vendredi : 9h00 – 18h00", "Samedi : 9h00 – 14h00", "Dimanche : Fermé"] },
 ];
 

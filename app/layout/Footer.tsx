@@ -9,7 +9,10 @@ import {
   Share2,
   Sparkles,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+
+import { product } from "@/lib/content/product";
 
 const columns = [
   {
@@ -64,11 +67,9 @@ export function Footer() {
         <div className="grid gap-8 px-7 py-12 lg:grid-cols-[1.15fr_0.8fr_0.8fr_0.95fr_1.35fr] lg:px-14">
           <div className="lg:border-r lg:border-white/10 lg:pr-10">
             <Link href="/" className="inline-block text-center">
-              <span className="block font-serif text-4xl tracking-[-0.07em]">
-                Capi<span className="font-light">Pousse</span>
-              </span>
-              <span className="block text-[0.55rem] text-white/70">
-                by NatiCosmetics
+              <Image src="/brand/capipousse-logo-white.png" alt={product.brand} width={1600} height={396} className="h-9 w-auto" />
+              <span className="mt-1 block text-[0.55rem] text-white/70">
+                {product.brandSuffix}
               </span>
             </Link>
             <span className="mt-5 block h-px w-11 bg-[#d8b071]" />
@@ -209,7 +210,7 @@ export function Footer() {
             </div>
           </div>
           <div className="mt-7 border-t border-white/10 pt-7 text-center text-sm text-white/45">
-            © {currentYear} CapiPousse by NatiCosmetics. Tous droits réservés.
+            © {currentYear} {product.brand} {product.brandSuffix}. Tous droits réservés.
           </div>
         </div>
       </div>
