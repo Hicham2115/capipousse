@@ -17,9 +17,9 @@ import { CartSheet } from "@/components/CartSheet";
 import { product } from "@/lib/content/product";
 
 const navLinks = [
-  { href: "#boutique", label: "Boutique" },
-  { href: "#a-propos", label: "À propos" },
-  { href: "#contact", label: "Contact" },
+  { href: "/boutique", label: "Boutique" },
+  { href: "/#a-propos", label: "À propos" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const navLinkClass =
